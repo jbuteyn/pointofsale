@@ -33,12 +33,14 @@ namespace pointofsale
                 test.addToReceipt(finalChoice);
                 test.addPrice(chosenPrice);
                 run = Continue();
-                //  Console.WriteLine("Total equals " + ((one.ReturnArray()[chosenItem-1].price) *chosenQuantity));
-
             }
             test.printReceipt();
             Console.WriteLine("subtotal is "+test.returnTotal());
-            Console.WriteLine("Total w/tax " + test.calcTax());
+            decimal grandTotal = test.calcTax();
+            Console.WriteLine("Total w/tax " + grandTotal);
+            Console.WriteLine("How would you like to pay? (1 for Cash \n2 for Credit /n3 for Check)");
+            int paymentChoice = int.Parse(Console.ReadLine());
+           // Validator.PaymentMethod(paymentChoice, grandTotal);
         }
 
         public static Boolean Continue()
