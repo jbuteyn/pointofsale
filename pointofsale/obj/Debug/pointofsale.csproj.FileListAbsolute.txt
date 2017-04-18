@@ -1,6 +1,0 @@
-c:\users\jbute\documents\visual studio 2015\Projects\pointofsale\pointofsale\bin\Debug\pointofsale.exe.config
-c:\users\jbute\documents\visual studio 2015\Projects\pointofsale\pointofsale\obj\Debug\pointofsale.csprojResolveAssemblyReference.cache
-c:\users\jbute\documents\visual studio 2015\Projects\pointofsale\pointofsale\bin\Debug\pointofsale.exe
-c:\users\jbute\documents\visual studio 2015\Projects\pointofsale\pointofsale\bin\Debug\pointofsale.pdb
-c:\users\jbute\documents\visual studio 2015\Projects\pointofsale\pointofsale\obj\Debug\pointofsale.exe
-c:\users\jbute\documents\visual studio 2015\Projects\pointofsale\pointofsale\obj\Debug\pointofsale.pdb
