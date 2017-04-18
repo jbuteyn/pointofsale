@@ -52,6 +52,7 @@
     <Compile Include="ProductArray.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="receipt.cs" />
     <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup>

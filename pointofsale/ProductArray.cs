@@ -11,11 +11,7 @@ namespace pointofsale
         Product[] prodArray = new Product[10];
 
 
-        // public ProductArray()
-        //{
-
-
-        //}
+        
         public Product[] ReturnArray()
         {
             Product[] prodArray = new Product[10];

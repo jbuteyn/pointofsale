@@ -16,19 +16,33 @@ namespace pointofsale
             // followed by the price of each items.
             ProductArray one = new ProductArray();
             one.PrintMenu(one.ReturnArray());
+            Product[] oneA = one.ReturnArray();
             int timesrun = 0;
             bool run = true;
+            receipt test = new receipt();
+
             while (run == true)
             {
+
                 timesrun++;
                 Console.WriteLine("Choose the number to select an item!");
-                string chosenItem = Console.ReadLine();
+                int chosenItem = int.Parse(Console.ReadLine());
+                string chosenName = oneA[chosenItem].name; 
                 Console.WriteLine("Quantity? (1-5)");
                 int chosenQuantity = int.Parse(Console.ReadLine());
-                Console.WriteLine(chosenItem + " " + chosenQuantity);
-                Continue();
+                double chosenPrice = (oneA[chosenItem].price) * chosenQuantity;
+                string finalChoice = (chosenName + " " + "$"+chosenPrice);
+                test.addToReceipt(finalChoice);
+                test.addPrice(chosenPrice);
+                run = Continue();
+
+                
+                
             }
+            test.printReceipt();
+            test.printTotal();
         }
+
         public static Boolean Continue()
         {
             Console.WriteLine("Make another selection? (Y/N): ");
@@ -38,8 +52,9 @@ namespace pointofsale
 
             if (input == "n")
             {
-                Console.WriteLine("Let's get you checked out.");
+                Console.WriteLine("Let's get you checked out. \nHere is your receipt");
                 run = false;
+                
             }
             else if (input == "y")
             {
