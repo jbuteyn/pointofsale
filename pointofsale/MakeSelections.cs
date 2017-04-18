@@ -28,7 +28,7 @@ namespace pointofsale
                 int chosenQuantity = int.Parse(Console.ReadLine());
                 
                 string chosenName = oneA[chosenItem-1].name;
-                double chosenPrice = (oneA[chosenItem-1].price) * chosenQuantity;
+                decimal chosenPrice = (oneA[chosenItem-1].price) * chosenQuantity;
                 string finalChoice = (chosenName + " x"+chosenQuantity + " $" + chosenPrice);
                 test.addToReceipt(finalChoice);
                 test.addPrice(chosenPrice);

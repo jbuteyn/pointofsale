@@ -9,9 +9,9 @@ namespace pointofsale
     class Receipt
     {
         List<string> userReceipt = new List<string>();
-        double totalPrice = 0;
-        double finalPrice;
-        double taxRate = .06;
+        decimal totalPrice = 0m;
+        decimal finalPrice;
+        decimal taxRate = .06m;
         
         public void addToReceipt(string addItem)
         {
@@ -28,20 +28,20 @@ namespace pointofsale
         
         
         }
-        public void addPrice(double price)
+        public void addPrice(decimal price)
         {
 
             totalPrice = totalPrice + price;
 
         }
-        public double returnTotal()
+        public decimal returnTotal()
         {
 
 
             return totalPrice;
 
         }
-        public double calcTax()
+        public decimal calcTax()
         {
             finalPrice = (taxRate * totalPrice) + totalPrice;
 
