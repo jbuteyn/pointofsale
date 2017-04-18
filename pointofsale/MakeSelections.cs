@@ -16,7 +16,7 @@ namespace pointofsale
             Product[] oneA = one.ReturnArray();
             int timesrun = 0;
             bool run = true;
-            receipt test = new receipt();
+            Receipt test = new Receipt();
 
             while (run == true)
             {
@@ -27,9 +27,9 @@ namespace pointofsale
                 Console.WriteLine("Quantity? (1-5)");
                 int chosenQuantity = int.Parse(Console.ReadLine());
                 
-                string chosenName = oneA[chosenItem].name;
-                double chosenPrice = (oneA[chosenItem].price) * chosenQuantity;
-                string finalChoice = (chosenName + " " + "$" + chosenPrice);
+                string chosenName = oneA[chosenItem-1].name;
+                double chosenPrice = (oneA[chosenItem-1].price) * chosenQuantity;
+                string finalChoice = (chosenName + " x"+chosenQuantity + " $" + chosenPrice);
                 test.addToReceipt(finalChoice);
                 test.addPrice(chosenPrice);
                 run = Continue();
@@ -38,6 +38,7 @@ namespace pointofsale
             }
             test.printReceipt();
             Console.WriteLine("subtotal is "+test.returnTotal());
+            Console.WriteLine("Total w/tax " + test.calcTax());
         }
 
         public static Boolean Continue()

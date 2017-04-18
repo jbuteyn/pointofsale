@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace pointofsale
 {
-    class receipt
+    class Receipt
     {
         List<string> userReceipt = new List<string>();
         double totalPrice = 0;
+        double finalPrice;
+        double taxRate = .06;
         
         public void addToReceipt(string addItem)
         {
@@ -38,6 +40,12 @@ namespace pointofsale
 
             return totalPrice;
 
+        }
+        public double calcTax()
+        {
+            finalPrice = (taxRate * totalPrice) + totalPrice;
+
+            return finalPrice;
         }
     }
 
