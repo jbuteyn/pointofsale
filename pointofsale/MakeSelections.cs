@@ -38,9 +38,9 @@ namespace pointofsale
             Console.WriteLine("subtotal is "+test.returnTotal());
             decimal grandTotal = test.calcTax();
             Console.WriteLine("Total w/tax " + grandTotal);
-            Console.WriteLine("How would you like to pay? (1 for Cash \n2 for Credit /n3 for Check)");
+            Console.WriteLine("How would you like to pay?\n1 for Cash \n2 for Credit \n3 for Check)");
             int paymentChoice = int.Parse(Console.ReadLine());
-           // Validator.PaymentMethod(paymentChoice, grandTotal);
+            Validator.PaymentMethod(paymentChoice, grandTotal);
         }
 
         public static Boolean Continue()

@@ -8,18 +8,12 @@ namespace pointofsale
 {
     class Cash
     {
-        private void checkout(finalPrice)
+        public void Checkout(decimal grandTotal)
         {
-            Console.WriteLine("Amount tendered: $");
-            float cash = float.Parse(Console.ReadLine());
-            float change = (cash - finalPrice);
-            Console.WriteLine(change);
+            Console.WriteLine("Enter Amount Tendered");
+            decimal cash = decimal.Parse(Console.ReadLine());
+            decimal change = (cash - grandTotal);
+            Console.WriteLine("Your change is " + change);
         }
-
-        /*public static void CheckOut();
-        {
-            
-        */
-
     }
 }

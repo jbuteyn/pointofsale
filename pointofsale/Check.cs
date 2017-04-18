@@ -8,12 +8,12 @@ namespace pointofsale
 {
     class Check
     {
-        private float CheckOut(finalPrice)
+        public void Checkout(decimal grandTotal)
         {
             Console.WriteLine("Amount tendered");
-            float checkAmount = float.Parse(Console.ReadLine());
+            decimal checkAmount = decimal.Parse(Console.ReadLine());
             Console.WriteLine("Please enter check number");
-            float checknum = float.Parse(Console.ReadLine());
+            decimal checknum = decimal.Parse(Console.ReadLine());
         }
     }
 }

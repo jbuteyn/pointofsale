@@ -9,15 +9,15 @@ namespace pointofsale
 {
     class CreditCard
     {
-        private float CheckOut(finalPrice)
+        public void Checkout(decimal grandTotal)
         {
             Console.WriteLine("Please enter Credit Card Number");
-            float cardNumber = float.Parse(Console.ReadLine());
+            decimal cardNumber = decimal.Parse(Console.ReadLine());
             Console.WriteLine("Please enter expiration date in 2 digit month and year");
-            float expdate = float.Parse(Console.ReadLine());
+            decimal expdate = decimal.Parse(Console.ReadLine());
             Console.WriteLine("Please enter 3 digit CCV number");
-            float CCV = float.Parse(Console.ReadLine());
-            Console.WriteLine("Thank you for your information");
+            decimal CVV = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("JBM Coffee Shop will charge " + grandTotal + "to card number " + cardNumber + " expiration date " + expdate + " CVV " + CVV);
         }
     }
 }
