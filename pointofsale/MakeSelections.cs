@@ -26,13 +26,18 @@ namespace pointofsale
                 int chosenItem = int.Parse(Console.ReadLine());
                 Console.WriteLine("Quantity? (1-5)");
                 int chosenQuantity = int.Parse(Console.ReadLine());
-                Console.WriteLine(chosenItem + " " + chosenQuantity);
-              //  Console.WriteLine("Total equals " + ((one.ReturnArray()[chosenItem-1].price) *chosenQuantity));
+                
+                string chosenName = oneA[chosenItem].name;
+                double chosenPrice = (oneA[chosenItem].price) * chosenQuantity;
+                string finalChoice = (chosenName + " " + "$" + chosenPrice);
+                test.addToReceipt(finalChoice);
+                test.addPrice(chosenPrice);
                 run = Continue();
+                //  Console.WriteLine("Total equals " + ((one.ReturnArray()[chosenItem-1].price) *chosenQuantity));
 
             }
             test.printReceipt();
-            test.printTotal();
+            Console.WriteLine("subtotal is "+test.returnTotal());
         }
 
         public static Boolean Continue()
