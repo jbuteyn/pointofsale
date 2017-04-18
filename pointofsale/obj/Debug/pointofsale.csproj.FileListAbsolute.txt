@@ -4,3 +4,9 @@ c:\users\jbute\documents\visual studio 2015\Projects\pointofsale\pointofsale\bin
 c:\users\jbute\documents\visual studio 2015\Projects\pointofsale\pointofsale\bin\Debug\pointofsale.pdb
 c:\users\jbute\documents\visual studio 2015\Projects\pointofsale\pointofsale\obj\Debug\pointofsale.exe
 c:\users\jbute\documents\visual studio 2015\Projects\pointofsale\pointofsale\obj\Debug\pointofsale.pdb
+C:\Users\bruce\Documents\Visual Studio 2015\Projects\pointofsale\pointofsale\bin\Debug\pointofsale.exe.config
+C:\Users\bruce\Documents\Visual Studio 2015\Projects\pointofsale\pointofsale\obj\Debug\pointofsale.exe
+C:\Users\bruce\Documents\Visual Studio 2015\Projects\pointofsale\pointofsale\obj\Debug\pointofsale.pdb
+C:\Users\bruce\Documents\Visual Studio 2015\Projects\pointofsale\pointofsale\bin\Debug\pointofsale.exe
+C:\Users\bruce\Documents\Visual Studio 2015\Projects\pointofsale\pointofsale\bin\Debug\pointofsale.pdb
+C:\Users\bruce\Documents\Visual Studio 2015\Projects\pointofsale\pointofsale\obj\Debug\pointofsale.csprojResolveAssemblyReference.cache

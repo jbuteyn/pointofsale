@@ -9,17 +9,16 @@ namespace pointofsale
     class ProductArray
     {
         Product[] prodArray = new Product[10];
-        
 
-        public ProductArray()
+
+        // public ProductArray()
+        //{
+
+
+        //}
+        public Product[] ReturnArray()
         {
             Product[] prodArray = new Product[10];
-            
-
-
-        }
-        public Product[] returnArray()
-        {
             prodArray[0] = new Product(3.50, "Regular Coffee");
             prodArray[1] = new Product(4.25, "Latte");
             prodArray[2] = new Product(4.00, "Espresso");
@@ -30,7 +29,31 @@ namespace pointofsale
             prodArray[7] = new Product(0.00, "Water");
             prodArray[8] = new Product(1.00, "Tea");
             prodArray[9] = new Product(12.00, "Logo Mug");
+
             return prodArray;
+        }
+        public void PrintMenu(Product[] ReturnArray)
+        {
+            for (int i = 0; i < prodArray.Length; i++)
+            {
+                Console.WriteLine("Selection " + (i + 1) + ": " + ReturnArray[i].name + "        " + ReturnArray[i].price);
+            }
+            //(Product product in ReturnArray)
+            //{
+            //    Console.WriteLine(product.price + "     " +product.name);
+            //}
+        }
+        public double returnPrice(int i)
+        {
+
+            return prodArray[i].price;
+
+        }
+        public string returnName(int i)
+        {
+
+            return prodArray[i].name;
+
         }
     }
 }

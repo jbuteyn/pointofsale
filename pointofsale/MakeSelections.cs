@@ -13,13 +13,15 @@ namespace pointofsale
             Console.WriteLine("Here's what we've got today:");
             // Product.PrintMenu;
             //This will ideally be a method run on Josh's 2-dimensional array in the Product class that will print out the name of each item
-            // followed by the price of each item.
+            // followed by the price of each items.
+            ProductArray one = new ProductArray();
+            one.PrintMenu(one.ReturnArray());
             int timesrun = 0;
             bool run = true;
             while (run == true)
             {
                 timesrun++;
-                Console.WriteLine("Choose the letter to select an item!");
+                Console.WriteLine("Choose the number to select an item!");
                 string chosenItem = Console.ReadLine();
                 Console.WriteLine("Quantity? (1-5)");
                 int chosenQuantity = int.Parse(Console.ReadLine());
@@ -51,9 +53,5 @@ namespace pointofsale
 
             return run;
         }
-        //Product.StoreItem
-        //This will be a method in the Product class that ideally will draw information from Josh's 2-D array (item name and price total
-        // for the quantity of the item) and store these in a separate list or array titled chosenItems.
     }
-
 }
