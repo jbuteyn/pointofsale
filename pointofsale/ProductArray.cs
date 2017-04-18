@@ -10,12 +10,6 @@ namespace pointofsale
     {
         Product[] prodArray = new Product[10];
 
-
-        // public ProductArray()
-        //{
-
-
-        //}
         public Product[] ReturnArray()
         {
             Product[] prodArray = new Product[10];
@@ -36,12 +30,8 @@ namespace pointofsale
         {
             for (int i = 0; i < prodArray.Length; i++)
             {
-                Console.WriteLine("Selection " + (i + 1) + ": " + ReturnArray[i].name + "        " + ReturnArray[i].price);
+                Console.WriteLine("Selection " + (i + 1) + ": " + ReturnArray[i].name.PadRight(15) + "        " + ReturnArray[i].price.ToString().PadLeft(10));
             }
-            //(Product product in ReturnArray)
-            //{
-            //    Console.WriteLine(product.price + "     " +product.name);
-            //}
         }
         public double returnPrice(int i)
         {

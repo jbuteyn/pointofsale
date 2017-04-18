@@ -11,9 +11,6 @@ namespace pointofsale
         public static void ChooseItems()
         {
             Console.WriteLine("Here's what we've got today:");
-            // Product.PrintMenu;
-            //This will ideally be a method run on Josh's 2-dimensional array in the Product class that will print out the name of each item
-            // followed by the price of each items.
             ProductArray one = new ProductArray();
             one.PrintMenu(one.ReturnArray());
             int timesrun = 0;
@@ -22,11 +19,12 @@ namespace pointofsale
             {
                 timesrun++;
                 Console.WriteLine("Choose the number to select an item!");
-                string chosenItem = Console.ReadLine();
+                int chosenItem = int.Parse(Console.ReadLine());
                 Console.WriteLine("Quantity? (1-5)");
                 int chosenQuantity = int.Parse(Console.ReadLine());
                 Console.WriteLine(chosenItem + " " + chosenQuantity);
-                Continue();
+              //  Console.WriteLine("Total equals " + ((one.ReturnArray()[chosenItem-1].price) *chosenQuantity));
+                run = Continue();
             }
         }
         public static Boolean Continue()
