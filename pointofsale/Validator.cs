@@ -8,17 +8,41 @@ namespace pointofsale
 {
     class Validator
     {
-        public static void DisplayMenu()
+        public static bool DisplayMenu()
         {
+            Console.WriteLine("Display menu? (Y / N)");
             string userChoice = (Console.ReadLine().ToLower());
-            if (userChoice == "y")
-            {
-                MakeSelections.ChooseItems();
+
+            { 
+                if (userChoice == "y")
+                {
+                    return true;
+                }
+                else if (userChoice == "n")
+                {
+                    Console.WriteLine("Goodbye");
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input.");
+                    return Validator.DisplayMenu();
+                }
             }
+
+        }
+        public static bool ValidateChoice(int chosenItem)
+        {
+            
+            if (chosenItem > 0 && chosenItem <= 10)
+                {
+                return true;
+                }
             else
-            {
-                Console.WriteLine("Thanks for stopping by!");
-            }
+                {
+                    Console.WriteLine("Invalid selection.");
+                return false;
+                }
         }
         public static void PaymentMethod(int paymentChoice, decimal grandTotal)
         {
@@ -39,7 +63,7 @@ namespace pointofsale
             }
             else
             {
-                Console.WriteLine("That is not a valid payment method. Please enter 1 for Cash, 2 for Credit, or 3 for Check.");
+                Console.WriteLine("That is not a valid payment method.");
             }
         }
     }

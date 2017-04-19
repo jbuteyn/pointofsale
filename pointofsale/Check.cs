@@ -14,6 +14,7 @@ namespace pointofsale
             decimal checkAmount = decimal.Parse(Console.ReadLine());
             Console.WriteLine("Please enter check number");
             decimal checknum = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Payment Approved");
         }
     }
 }
